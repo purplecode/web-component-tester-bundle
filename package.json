@@ -8,6 +8,9 @@
     "wct": "./node_modules/web-component-tester/bin/wct",
     "wct-st": "./node_modules/web-component-tester/bin/wct-st"
   },
+  "scripts": {
+    "test": "node node_modules/web-component-tester/bin/wct test/bundle-test.html"
+  },
   "devDependencies": {
     "webcomponentsjs": "^1.0.2"
   }
