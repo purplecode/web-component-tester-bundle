@@ -1,6 +1,6 @@
 {
   "name": "web-component-tester-bundle",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "dependencies": {
     "web-component-tester": "^4.3.1"
   },
