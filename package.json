@@ -1,0 +1,10 @@
+{
+  "name": "web-component-tester-bundle",
+  "version": "0.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "web-component-tester": "^4.3.1"
+  },
+  "devDependencies": {},
+  "license": "ISC"
+}
