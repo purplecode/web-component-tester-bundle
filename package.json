@@ -2,7 +2,7 @@
   "name": "web-component-tester-bundle",
   "version": "0.0.1",
   "dependencies": {
-    "web-component-tester": "^4.3.1"
+    
   },
   "bin": {
     "wctb": "./node_modules/web-component-tester/bin/wct",
@@ -12,6 +12,7 @@
     "test": "node node_modules/web-component-tester/bin/wct test/bundle-test.html"
   },
   "devDependencies": {
+    "web-component-tester": "^4.3.1",
     "webcomponentsjs": "^1.0.2"
   }
 }
