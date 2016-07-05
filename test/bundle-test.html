@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="../node_modules/webcomponentsjs/lite.js"></script>
+  <script src="../node_modules/web-component-tester/browser.js"></script>
+  <link rel="import" href="test-element.html">
+</head>
+<body>
+  <test-element id="element"></test-element>
+  <script>
+    suite('<test-element>', function() {
+      test('should find element', function() {
+        assert.strictEqual(document.getElementById('element').secret, 'Pinkie Pie');
+      });
+    });
+  </script>
+</body>
+</html>

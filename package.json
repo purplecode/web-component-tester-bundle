@@ -1,10 +1,14 @@
 {
   "name": "web-component-tester-bundle",
-  "version": "0.0.0",
-  "main": "index.js",
+  "version": "0.0.1",
   "dependencies": {
     "web-component-tester": "^4.3.1"
   },
-  "devDependencies": {},
-  "license": "ISC"
+  "bin": {
+    "wct": "./node_modules/web-component-tester/bin/wct",
+    "wct-st": "./node_modules/web-component-tester/bin/wct-st"
+  },
+  "devDependencies": {
+    "webcomponentsjs": "^1.0.2"
+  }
 }

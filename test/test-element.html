@@ -1,0 +1,30 @@
+<!-- Defines element markup -->
+<template>
+    <p>Hello <strong></strong></p>
+</template>
+
+<script>
+(function(window, document, undefined) {
+    var thatDoc = document;
+    var thisDoc =  (thatDoc._currentScript || thatDoc.currentScript).ownerDocument;
+    var template = thisDoc.querySelector('template').content;
+
+    var TestElementProto = Object.create(HTMLElement.prototype);
+
+    TestElementProto.secret = 'Pinkie Pie';
+
+    TestElementProto.createdCallback = function() {
+        var shadowRoot = this.createShadowRoot();
+        var clone = thatDoc.importNode(template, true);
+        shadowRoot.appendChild(clone);
+
+        this.strong = shadowRoot.querySelector('strong');
+        this.strong.textContent = this.secret;
+    };
+
+    window.TestElement = thatDoc.registerElement('test-element', {
+        prototype: TestElementProto
+    });
+    
+})(window, document);
+</script>
