@@ -1,17 +1,22 @@
 {
   "name": "web-component-tester-bundle",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "dependencies": {
-    
+    "web-component-tester": "^4.3.1"
   },
   "bin": {
     "wctb": "./node_modules/web-component-tester/bin/wct",
     "wctb-st": "./node_modules/web-component-tester/bin/wct-st"
   },
   "scripts": {
-    "test": "node node_modules/web-component-tester/bin/wct test/bundle-test.html"
+    "test": "node node_modules/web-component-tester/bin/wct test/bundle-test.html",
+    "bundle-dependencies": "bundle-dependencies",
+    "bundle-publish": "npm run bundle-dependencies update; git commit -m 'Bundled dependencies.' ./package.json; git push; rm -fr ./node_modules; npm install --production $(bundle-dependencies list-bundled-dependencies); npm dedupe; npm prune; npm publish; npm install;"
   },
   "devDependencies": {
     "webcomponentsjs": "^1.0.2"
-  }
+  },
+  "bundledDependencies": [
+    "web-component-tester"
+  ]
 }
